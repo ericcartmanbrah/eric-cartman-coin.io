@@ -243,4 +243,16 @@ body {
 }
 
 
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .cartman-footer {
+        flex-direction: column; /* Cambiar a disposición de columna */
+        align-items: center; /* Centrar verticalmente los enlaces */
+    }
+
+    .cartman-link {
+        margin: 5px 0; /* Reducir el espacio entre los enlaces */
+    }
+}
+
 
