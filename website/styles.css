@@ -125,7 +125,7 @@ a:hover {
 
 .cartman-link.highlight-telegram-english:hover,
 .cartman-link.highlight-telegram-english:active {
-    color: gray; /* Cambia el color a amarillo cuando se pasa el ratón o se hace clic */
+    color: rgb(223, 4, 252); /* Cambia el color a amarillo cuando se pasa el ratón o se hace clic */
 }
 
 .cartman-link.highlight-twitter-hispanic:hover,
@@ -137,6 +137,12 @@ a:hover {
 .cartman-link.highlight-english:active {
     color: #FF0000; /* Cambia el color a rojo cuando se pasa el ratón o se hace clic */
 }
+
+.cartman-link.highlight-newsletter:hover,
+.cartman-link.highlight-newsletter:active {
+    color: olivedrab; /* Cambia el color a rojo cuando se pasa el ratón o se hace clic */
+}
+
 
 
 .cartman-gif-centered {
