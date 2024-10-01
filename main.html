@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Txipi on Fomo3d.fun (SOLANA)</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="txipidiseño1.png">
+
+    <!-- Fuentes y estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:700&display=swap">
+
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background: black; /* Fondo negro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; /* Permite el uso de elementos posicionados relativamente */
+        }
+
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+            max-width: 600px;
+            width: 90%; /* Hace que la caja sea más estrecha en pantallas pequeñas */
+        }
+
+        /* Título principal */
+        .header-title {
+            font-weight: bold;
+            font-size: 4rem; /* Tamaño del título */
+            color: #1A1A1A; /* Color negro para el título */
+            margin-top: 20px;
+        }
+
+        /* FOMO3D con gradiente estático */
+        .fomo-title {
+            font-weight: bold;
+            font-size: 3rem; /* Tamaño del título FOMO3D */
+            background: linear-gradient(135deg, #00FFA3, #00C8FF, #A23C92); /* Gradiente de colores de Solana */
+            -webkit-background-clip: text; /* Clip del fondo al texto para el gradiente */
+            -webkit-text-fill-color: transparent; /* Color del texto transparente */
+            margin-top: 10px; /* Espacio adicional */
+        }
+
+        /* Descripción del contenido */
+        .description {
+            font-size: 1.2rem;
+            color: #1A1A1A; /* Color negro para el texto de la descripción */
+            margin: 10px 0;
+        }
+
+        /* Imagen de Txipi */
+        .txipi-image {
+            width: 100%; /* Imagen ocupa el 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            max-width: 400px; /* Tamaño máximo de la imagen */
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Estilos de los íconos de redes sociales */
+        .social-icons {
+            position: fixed; /* Los íconos se mantienen fijos en la pantalla */
+            bottom: 20px; /* Se posicionan 20px desde el borde inferior */
+            left: 50%; /* Centra el grupo de íconos horizontalmente */
+            transform: translateX(-50%); /* Ajuste para centrar exactamente */
+            display: flex;
+            gap: 20px; /* Espaciado entre los íconos */
+        }
+
+        .social-icons img {
+            width: 40px; /* Tamaño de los íconos */
+            height: 40px;
+            transition: transform 0.3s, opacity 0.3s; /* Animación al hacer hover */
+            cursor: pointer; /* Cambia el cursor al pasar el ratón */
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2); /* Agranda ligeramente al pasar el ratón */
+            opacity: 0.8; /* Cambia la opacidad al pasar el ratón */
+        }
+
+        /* Consultas de medios para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 3rem; /* Reduce el tamaño del título en pantallas pequeñas */
+            }
+
+            .fomo-title {
+                font-size: 2.5rem; /* Reduce el tamaño de FOMO3D en pantallas pequeñas */
+            }
+
+            .description {
+                font-size: 1rem; /* Tamaño de fuente más pequeño para la descripción */
+            }
+
+            .txipi-image {
+                max-width: 300px; /* Reduce el tamaño máximo de la imagen */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 2.5rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+            }
+
+            .fomo-title {
+                font-size: 2rem; /* Reduce el tamaño de FOMO3D en pantallas muy pequeñas */
+            }
+
+            .description {
+                font-size: 0.9rem; /* Tamaño de fuente más pequeño para la descripción */
+            }
+
+            .txipi-image {
+                max-width: 250px; /* Reduce el tamaño máximo de la imagen */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <!-- Imagen del perro -->
+        <img src="txipidiseño1.png" alt="Txipi Dog" class="txipi-image">
+
+        <!-- Título -->
+        <h1 class="header-title">$TXIPI</h1>
+
+        <!-- Descripción -->
+        <p class="description">Meet $TXIPI, the first dog to join FOMO3D!</p>
+        <p class="description">Don't miss out on this paw-some opportunity to be part of crypto history.</p>
+        <p class="description">Get ready to fetch some serious gains! Buy a bag and enjoy the dog's moon launch!</p>
+    </div>
+
+    <!-- Íconos de redes sociales -->
+    <div class="social-icons">
+        <!-- Telegram -->
+        <a href="https://t.me/yourtelegram" target="_blank">
+            <img src="telegram.png" alt="Telegram">
+        </a>
+        <!-- X (Twitter) -->
+        <a href="https://twitter.com/yourXprofile" target="_blank">
+            <img src="X.png" alt="X (Twitter)">
+        </a>
+        <!-- DexScreener -->
+        <a href="https://dexscreener.com/yourdexlink" target="_blank">
+            <img src="dexscreener.png" alt="DexScreener">
+        </a>
+    </div>
+
+</body>
+</html>
