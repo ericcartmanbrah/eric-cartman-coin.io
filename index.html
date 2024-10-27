@@ -20,11 +20,11 @@
             background-image: url('fondoladrillos.jpg'); /* Fondo negro */
             margin: 0;
             padding: 0;
-            display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             position: relative; /* Permite el uso de elementos posicionados relativamente */
+            align-content: center;
         }
 
         .content-wrapper {
@@ -37,6 +37,7 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
             max-width: 600px;
             width: 90%; /* Hace que la caja sea más estrecha en pantallas pequeñas */
+            margin: 50px auto;
         }
 
         /* Título principal */
@@ -104,8 +105,7 @@
         }
 
         .txipigraffiti{
-        position: absolute;
-        z-index: -1;
+        position: relative;
         bottom: 0;
         right: 0;
         width: 300px; /* Ajusta el tamaño */
@@ -149,7 +149,7 @@
             }
 
             .txipigraffiti{
-                width: 130px;
+                width: 300px;
             }
         }
     </style>
