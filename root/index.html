@@ -17,26 +17,43 @@
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
-            background-image: url('fondoladrillos.jpg'); /* Fondo negro */
+            background:black; /* Fondo negro */
             margin: 0;
             padding: 0;
-            display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             position: relative; /* Permite el uso de elementos posicionados relativamente */
+            align-content: center;
         }
 
         .content-wrapper {
             background: rgba(254, 254, 254, 0.059); /* Color blanco con 50% de transparencia */
             backdrop-filter: blur(2px); /* Aplica un filtro de desenfoque de 5px */
             border-radius: 10px;
-            padding: 30px;
+            align-items: center;
+            justify-content: center;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
             max-width: 600px;
             width: 90%; /* Hace que la caja sea más estrecha en pantallas pequeñas */
+            margin: 0 auto;
+            margin-top: 3%;
+        }
+        
+        .link-buy > a{
+            display: inline;
+            position: absolute;
+            top:0;
+            right:0;
+            margin: 2%;
+            padding: 5%;
+            background-color: whitesmoke;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            
         }
 
         /* Título principal */
@@ -71,6 +88,21 @@
             font-style: normal;
         }
 
+        .style-desc{
+            background: linear-gradient(
+                to right,
+                rgb(255, 255, 255),
+                rgb(120, 36, 139),
+                rgb(94, 178, 211),
+                rgb(42, 217, 144),
+                rgb(33, 255, 118)
+            ) ;
+            background-position: 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 200%;
+            text-transform: uppercase;
+        }
 
         /* Imagen de Txipi */
         .txipi-image {
@@ -80,6 +112,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 20px auto;
+            padding-top: 20px;
             display: block;
         }
 
@@ -103,14 +136,84 @@
             opacity: 0.8; /* Cambia la opacidad al pasar el ratón */
         }
 
-        .txipigraffiti{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 300px; /* Ajusta el tamaño */
-        pointer-events: none; /* No interfiere en las interacciones */
+        .section{
+        display: flex; /* Coloca la imagen y el texto uno al lado del otro */
+        align-items: center; /* Alinea verticalmente el texto y la imagen */
+        align-content: center;
+        max-width: fit-content; /* Asegura que el contenedor no desborde */
+        text-align: center;
+        gap: 10%;
         }
 
+        .section >img{
+            width: 80%; /* Ajusta el ancho de la imagen según lo que necesites */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .contract-box{
+            display:inline-block;
+            width: fit-content;
+        }
+        .contract-box > h2{
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+            font-style: normal;
+            font: italic;
+            text-align: center;
+            font-size: 250%;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .contract-box > p{
+            text-align: center;
+            font-size: 90%;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        
+
+        /*Galeria*/
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Las columnas se adaptan al ancho */
+        display: grid;
+        gap: 10px;
+        width: 50% 0;
+        justify-items: auto;
+        justify-content: center; /* Centra el contenido en el eje horizontal */
+        }
+            /* Imágenes */
+        .gallery img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(2); /* Aumenta un poco la imagen */
+            padding: 5%;
+        }
+
+        @media (max-width: 1000px) {
+            .section{
+                display: block;
+                text-align:center;
+            }
+            .gallery img:hover {
+            transform: none;
+            }
+            .section >img{
+            width: 40%; /* Ajusta el ancho de la imagen según lo que necesites */
+            height: auto; /* Mantiene la proporción de la imagen */
+            }
+            .contract-box{
+            display:inline-block;
+            width: fit-content;
+            }
+
+        }
         /* Consultas de medios para pantallas más pequeñas */
         @media (max-width: 768px) {
             .header-title {
@@ -127,6 +230,10 @@
 
             .txipi-image {
                 max-width: 300px; /* Reduce el tamaño máximo de la imagen */
+            }
+
+            .section{
+                display: block;
             }
         }
 
@@ -146,6 +253,13 @@
             .txipi-image {
                 max-width: 250px; /* Reduce el tamaño máximo de la imagen */
             }
+
+            .txipigraffiti{
+                width: 300px;
+            }
+            .contract-box{
+                margin: 0 auto ;
+            }
         }
     </style>
 </head>
@@ -153,13 +267,13 @@
 
     <div class="content-wrapper">
         <!-- Imagen del perro -->
-        <img src="txipi.png" alt="Txipi Dog" class="txipi-image">
+        <img src="txipidiseño1.png" alt="Txipi Dog" class="txipi-image">
 
         <!-- Título -->
         <h1 class="header-title">$TXIPI</h1>
 
         <!-- Descripción -->
-        <p class="description">Meet $TXIPI, the first dog to join FOMO3D!</p>
+        <p class="description">Meet $TXIPI, the first dog to join <id class="style-desc">FOMO3D!</id></p>
         <p class="description">Don't miss out on this paw-some opportunity to be part of crypto history.</p>
         <p class="description">Get ready to fetch some serious gains! Buy a bag and enjoy the dog's moon launch!</p>
 
@@ -182,6 +296,44 @@
             </a>
         </div>
     </div>
-    <img src="txipigraffiti.png" alt="txipigraffiti" class="txipigraffiti">
+
+    <div class="section">
+        <img src="txipigraffiti.png" alt="txipigraffiti" class="txipigraffiti">
+
+        <div class="contract-box">
+            <h2>CONTRACT ADDRESS</h2>
+            <p>4N5hjgR7X6WpXy2NBWvQ8HkaS8sEf6cVW5vLdF9oGYWa</p>
+        </div>
+    </div>
+
+    <div class="container"> 
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+        <div class="gallery">
+            <img src="txipi.png" alt="Foto 1">
+        </div>
+    </div>
 </body>
 </html>
